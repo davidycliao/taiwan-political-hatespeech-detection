@@ -32,7 +32,9 @@ A Study in Taiwan](https://www.researchgate.net/publication/363074513_Political_
 
 
 
-### Demo: How to Use in Flair (Python)
+## Demo
+
+### How to Use in Flair (Python)
 
 - System: Python 3.10
 - Requires: **[Flair](https://github.com/flairNLP/flair/)** (`pip install flair`)
@@ -74,6 +76,11 @@ This yields the following output:
 
 Sentence[1]: "這位女士有點志氣好嗎？韓粉都是這種人" → Hate Speech (0.8336)
 ```
+
+
+### How to Use in R
+
+_To be updated._ 
 
 
 ### Training: Script to Train the Model
