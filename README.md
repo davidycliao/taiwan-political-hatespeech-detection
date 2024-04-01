@@ -61,8 +61,6 @@ This yields the following output:
 Sentence[1]: "這位女士有點志氣好嗎？韓粉都是這種人" → Hate Speech (0.8336)
 ```
 
----
-
 ### Training: Script to Train the Model
 
 
