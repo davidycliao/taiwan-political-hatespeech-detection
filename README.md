@@ -15,6 +15,7 @@ A Study in Taiwan](https://www.researchgate.net/publication/363074513_Political_
 - The training distribution consists of 14,035 instances of Hate Speech and 10,821 of Non-Hate Speech.
 - The original weights were 1.149 for Hate Speech and 0.886 for Non-Hate Speech, which I normalized to 1.0 for Hate Speech and 0.771 for Non-Hate Speech, respectively.
 
+
 ## Performance
 
 - F-score (micro): **0.7597**
@@ -30,7 +31,6 @@ A Study in Taiwan](https://www.researchgate.net/publication/363074513_Political_
 | **Weighted Avg**| **0.7674**| **0.7596** | **0.7607** | **3107** |
 
 
----
 
 ### Demo: How to Use in Flair 
 
