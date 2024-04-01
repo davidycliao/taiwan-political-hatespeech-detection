@@ -1,5 +1,5 @@
 
-## Hate Speech Detection Usong Flair NLP
+## Hate Speech Detection Using Flair NLP
 
 This is a traditional Chinese hate speech classifier trained on the albert-tiny-chinese model, 
 maintained by CKIP Lab, and utilizing a collection from the traditional Chinese hate speech 
@@ -32,19 +32,35 @@ A Study in Taiwan](https://www.researchgate.net/publication/363074513_Political_
 
 
 
-### Demo: How to Use in Flair 
+### Demo: How to Use in Flair (Python)
 
 - System: Python 3.10
 - Requires: **[Flair](https://github.com/flairNLP/flair/)** (`pip install flair`)
 
 ```python
+
+# Remotely load the classifier
+import requests
+
+model_file_url = 'https://github.com/davidycliao/taiwan-hatespeech-detection/raw/main/ch-hs-model/best-model.pt'
+
+# Local the best model of the performance
+model_file_path = 'best-model.pt'
+
+# Download the file
+response = requests.get(model_file_url)
+with open(model_file_path, 'wb') as file:
+    file.write(response.content)
+
+```
+
+```python
+
 from flair.data import Sentence
 from flair.models import TextClassifier
 
-# load classifier
-classifier = TextClassifier.load('davidycliao/taiwan-ckip-hatespeech-detection')
+# example sentence 
 
-# make example sentence in any of the four languages
 sentence = Sentence("這位女士有點志氣好嗎？韓粉都是這種人")
 
 # predict detection
@@ -53,13 +69,13 @@ classifier.predict(sentence)
 # print sentence
 print(sentence)
 
-```
-
+```python
 This yields the following output:
 
 ```
 Sentence[1]: "這位女士有點志氣好嗎？韓粉都是這種人" → Hate Speech (0.8336)
 ```
+
 
 ### Training: Script to Train the Model
 
