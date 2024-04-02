@@ -117,7 +117,7 @@ Sentence[1]: "這位女士有點志氣好嗎？韓粉都是這種人" → Hate S
 ```
 
 
-### Training: Script to Train the Model
+## Training: Script to Train the Model
 
 
 The model was trained using the following Flair script and completed **30** epochs:
