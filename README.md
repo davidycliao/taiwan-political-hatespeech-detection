@@ -44,7 +44,7 @@ A Study in Taiwan](https://www.researchgate.net/publication/363074513_Political_
 import requests
 
 # URL to your Flair model file (direct link to the raw file)
-model_file_url = 'https://github.com/davidycliao/taiwan-hatespeech-detection/raw/main/ch-hs-model/best-model.pt'
+model_file_url = 'https://github.com/davidycliao/taiwan-political-hatespeech-detection/raw/main/ch-hs-model/best-model.pt'
 
 # Local path to save the model file
 model_file_path = 'best-model.pt'
@@ -90,7 +90,7 @@ Sentence <- flair_data()$Sentence
 TextClassifier <- flair_models()$TextClassifier
 
 # Specify the URL of the model file
-model_file_url <- "https://github.com/davidycliao/taiwan-hatespeech-detection/raw/main/ch-hs-model/best-model.pt"
+model_file_url <- "https://github.com/davidycliao/taiwan-political-hatespeech-detection/raw/main/ch-hs-model/best-model.pt"
 
 # Set the local path where you want to save the model
 model_file_path <- "best-model.pt"
@@ -188,7 +188,7 @@ classifier = classifier.to('gpu')
 trainer = ModelTrainer(classifier, corpus)
 
 
-trainer.train('taiwan-ckip-hatespeech-detection',
+trainer.train('ch-hs-model',
               shuffle = True,                 
               patience=5,                     
               learning_rate=0.02,             
