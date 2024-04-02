@@ -12,7 +12,7 @@ A Study in Taiwan (2022)](https://www.researchgate.net/publication/363074513_Pol
 - I reorganized the training data provided by the authors of [Political Hate Speech Detection and Lexicon Building: 
 A Study in Taiwan](https://www.researchgate.net/publication/363074513_Political_Hate_Speech_Detection_and_Lexicon_Building_A_Study_in_Taiwan)
   and made adjustments. The fianl dataset includes 24,856 training set, 3,108 development set, and 3,107 test set.
-  The authors of the ariticle retain the rights to the original data.
+  The authors of the publication retain their rights to the original dataset.
 - The training distribution consists of 14,035 instances of Hate Speech and 10,821 of Non-Hate Speech.
 - The original weights were 1.149 for Hate Speech and 0.886 for Non-Hate Speech, which I normalized to 1.0 for Hate Speech and 0.771 for Non-Hate Speech, respectively.
 
