@@ -3,13 +3,14 @@
 
 This is a traditional Chinese hate speech classifier trained on the albert-tiny-chinese model, 
 maintained by CKIP Lab, and utilizing a collection from the traditional Chinese hate speech 
-dataset as described in '[2022Political Hate Speech Detection and Lexicon Building: 
-A Study in Taiwan](https://www.researchgate.net/publication/363074513_Political_Hate_Speech_Detection_and_Lexicon_Building_A_Study_in_Taiwan),' published in _IEEE Explore_.
+dataset as described in '[Political Hate Speech Detection and Lexicon Building: 
+A Study in Taiwan (2022)](https://www.researchgate.net/publication/363074513_Political_Hate_Speech_Detection_and_Lexicon_Building_A_Study_in_Taiwan),' published in _IEEE Explore_.
 
 
 ## Overview of Training Dataset Details
 
-- I reorganized the training data provided by the authors of [2022_Political Hate Speech Detection and Lexicon Building: A Study in Taiwan](https://www.researchgate.net/publication/363074513_Political_Hate_Speech_Detection_and_Lexicon_Building_A_Study_in_Taiwan)
+- I reorganized the training data provided by the authors of [Political Hate Speech Detection and Lexicon Building: 
+A Study in Taiwan](https://www.researchgate.net/publication/363074513_Political_Hate_Speech_Detection_and_Lexicon_Building_A_Study_in_Taiwan)
   and made adjustments. The fianl dataset includes 24,856 training set, 3,108 development set, and 3,107 test set.
   The authors of the ariticle retain the rights to the original data.
 - The training distribution consists of 14,035 instances of Hate Speech and 10,821 of Non-Hate Speech.
