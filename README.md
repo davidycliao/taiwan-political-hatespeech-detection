@@ -1,8 +1,8 @@
 
 ## Hate Speech Detection Using Flair NLP
 
-This is a traditional Chinese hate speech classifier trained on the albert-tiny-chinese model, 
-maintained by CKIP Lab, and utilizing a collection from the traditional Chinese hate speech 
+This is a traditional Chinese hate speech classifier trained on [albert-tiny-chinese model](https://huggingface.co/ckiplab/albert-tiny-chinese), 
+maintained by [CKIP Lab](https://ckip.iis.sinica.edu.tw), and utilizing a collection from the traditional Chinese hate speech 
 dataset as described in '[Political Hate Speech Detection and Lexicon Building: 
 A Study in Taiwan (2022)](https://www.researchgate.net/publication/363074513_Political_Hate_Speech_Detection_and_Lexicon_Building_A_Study_in_Taiwan),' published in _IEEE Explore_.
 
@@ -80,11 +80,34 @@ Sentence[1]: "這位女士有點志氣好嗎？韓粉都是這種人" → Hate S
 ### How to Use in R
 
 ```r
-library(flaiR)# flaiR: An R Wrapper for Accessing Flair NLP 0.12.2
+library(flaiR)
+# flaiR: An R Wrapper for Accessing Flair NLP 0.12.2
 
 ```
 
-```rSentence <- flair_data()$Sentence TextClassifier <- flair_models()$TextClassifier# Specify the URL of the model filemodel_file_url <- "https://github.com/davidycliao/taiwan-hatespeech-detection/raw/main/ch-hs-model/best-model.pt"# Set the local path where you want to save the modelmodel_file_path <- "best-model.pt"# Use download.file() to download the modeldownload.file(model_file_url, model_file_path, method="auto")classifier <- TextClassifier$load(model_file_path)# Sentence to classifysentence <- Sentence("這位女士有點志氣好嗎？韓粉都是這種人")# Model detectionclassifier$predict(sentence)# Print sentenceprint(sentence)
+```r
+Sentence <- flair_data()$Sentence 
+TextClassifier <- flair_models()$TextClassifier
+
+# Specify the URL of the model file
+model_file_url <- "https://github.com/davidycliao/taiwan-hatespeech-detection/raw/main/ch-hs-model/best-model.pt"
+
+# Set the local path where you want to save the model
+model_file_path <- "best-model.pt"
+
+# Use download.file() to download the model
+download.file(model_file_url, model_file_path, method="auto")
+classifier <- TextClassifier$load(model_file_path)
+
+
+# Sentence to classify
+sentence <- Sentence("這位女士有點志氣好嗎？韓粉都是這種人")
+
+# Model detection
+classifier$predict(sentence)
+
+# Print sentence
+print(sentence)
 ```
 
 This yields the following output:
