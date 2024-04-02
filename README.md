@@ -40,16 +40,15 @@ A Study in Taiwan](https://www.researchgate.net/publication/363074513_Political_
 - Requires: **[Flair](https://github.com/flairNLP/flair/)** (`pip install flair`)
 
 ```python
-
-# Remotely load the classifier
 import requests
 
+# URL to your Flair model file (direct link to the raw file)
 model_file_url = 'https://github.com/davidycliao/taiwan-hatespeech-detection/raw/main/ch-hs-model/best-model.pt'
 
-# Local the best model of the performance
+# Local path to save the model file
 model_file_path = 'best-model.pt'
 
-# Download the file
+# Download the model
 response = requests.get(model_file_url)
 with open(model_file_path, 'wb') as file:
     file.write(response.content)
@@ -57,32 +56,41 @@ with open(model_file_path, 'wb') as file:
 ```
 
 ```python
-
 from flair.data import Sentence
 from flair.models import TextClassifier
-
-# example sentence 
-
+# Sentence to classify
 sentence = Sentence("這位女士有點志氣好嗎？韓粉都是這種人")
 
-# predict detection
+# Model detection
 classifier.predict(sentence)
 
-# print sentence
+# Print sentence
 print(sentence)
 
 ```
 
-```python
 This yields the following output:
 
+```terminal
 Sentence[1]: "這位女士有點志氣好嗎？韓粉都是這種人" → Hate Speech (0.8336)
 ```
 
 
 ### How to Use in R
 
-_To be updated._ 
+```r
+library(flaiR)# flaiR: An R Wrapper for Accessing Flair NLP 0.12.2
+
+```
+```r
+Sentence <- flair_data()$Sentence TextClassifier <- flair_models()$TextClassifierSentence <- flair_data()$Sentence TextClassifier <- flair_models()$TextClassifier# Specify the URL of the model filemodel_file_url <- "https://github.com/davidycliao/taiwan-hatespeech-detection/raw/main/ch-hs-model/best-model.pt"# Set the local path where you want to save the modelmodel_file_path <- "best-model.pt"# Use download.file() to download the modeldownload.file(model_file_url, model_file_path, method="auto")classifier <- TextClassifier$load(model_file_path)# Sentence to classifysentence <- Sentence("這位女士有點志氣好嗎？韓粉都是這種人")# Model detectionclassifier$predict(sentence)# Print sentenceprint(sentence)
+```
+
+This yields the following output:
+
+```terminal
+Sentence[1]: "這位女士有點志氣好嗎？韓粉都是這種人" → Hate Speech (0.8336)
+```
 
 
 ### Training: Script to Train the Model
