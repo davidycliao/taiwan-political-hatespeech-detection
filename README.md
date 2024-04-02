@@ -82,8 +82,8 @@ Sentence[1]: "這位女士有點志氣好嗎？韓粉都是這種人" → Hate S
 library(flaiR)# flaiR: An R Wrapper for Accessing Flair NLP 0.12.2
 
 ```
-```r
-Sentence <- flair_data()$Sentence TextClassifier <- flair_models()$TextClassifierSentence <- flair_data()$Sentence TextClassifier <- flair_models()$TextClassifier# Specify the URL of the model filemodel_file_url <- "https://github.com/davidycliao/taiwan-hatespeech-detection/raw/main/ch-hs-model/best-model.pt"# Set the local path where you want to save the modelmodel_file_path <- "best-model.pt"# Use download.file() to download the modeldownload.file(model_file_url, model_file_path, method="auto")classifier <- TextClassifier$load(model_file_path)# Sentence to classifysentence <- Sentence("這位女士有點志氣好嗎？韓粉都是這種人")# Model detectionclassifier$predict(sentence)# Print sentenceprint(sentence)
+
+```rSentence <- flair_data()$Sentence TextClassifier <- flair_models()$TextClassifier# Specify the URL of the model filemodel_file_url <- "https://github.com/davidycliao/taiwan-hatespeech-detection/raw/main/ch-hs-model/best-model.pt"# Set the local path where you want to save the modelmodel_file_path <- "best-model.pt"# Use download.file() to download the modeldownload.file(model_file_url, model_file_path, method="auto")classifier <- TextClassifier$load(model_file_path)# Sentence to classifysentence <- Sentence("這位女士有點志氣好嗎？韓粉都是這種人")# Model detectionclassifier$predict(sentence)# Print sentenceprint(sentence)
 ```
 
 This yields the following output:
