@@ -130,7 +130,6 @@ from flair.embeddings import TransformerDocumentEmbeddings
 from flair.models import TextClassifier
 from flair.trainers import ModelTrainer
 from sklearn.model_selection import train_test_split
-from sklearn.utils.class_weight import compute_class_weight
 import json
 import flair
 
